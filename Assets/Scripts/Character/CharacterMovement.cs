@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveTempCharacter : MonoBehaviour
+public class CharacterMovement : MonoBehaviour
 {
     public float speed = 100;
     public Rigidbody2D rb;

@@ -3,14 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 
-public class Fireball : MonoBehaviour
+public class TorchLight : MonoBehaviour
 {
     
     public GameObject fireballPrefab;
     public Light2D torch;
     public float fireballForce = 10f;
+    public float fireballEnergyNeeded = 0.2f;
+
+    public float torchMax = 2f;
     
     // Start is called before the first frame update
+    
+    void Start() {
+        torch.pointLightOuterRadius = torchMax;
+    }
+    
     void Shoot()
     {
         var worldMousePosition = Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
@@ -20,10 +28,11 @@ public class Fireball : MonoBehaviour
         GameObject fireball = Instantiate(fireballPrefab, this.transform.position, this.transform.rotation);
         Rigidbody2D rb = fireball.GetComponent<Rigidbody2D>();
         rb.AddForce(direction * fireballForce, ForceMode2D.Impulse);
+
         StartCoroutine(DestroyFireball(fireball));
 
-        if (torch.intensity > 0) {
-            torch.intensity -= (float) 0.1;
+        if (torch.pointLightOuterRadius > 0) {
+            torch.pointLightOuterRadius -= fireballEnergyNeeded;
         }
     }
 

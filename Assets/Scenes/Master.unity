@@ -414,8 +414,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.16921353
-  m_PointLightOuterRadius: 1.9572507
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 3
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -710,7 +710,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireballPrefab: {fileID: 287127108180324977, guid: e18a697a18098a9548378534af47ac8d,
     type: 3}
-  fireballForce: 10
+  torch: {fileID: 1150762687}
+  fireballForce: 30
 --- !u!1 &2051127992
 GameObject:
   m_ObjectHideFlags: 0

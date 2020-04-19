@@ -5,6 +5,7 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class EnemyProperties : MonoBehaviour
 {
+    public Animator animator; 
     
     public float health = 100f;
 
@@ -26,13 +27,15 @@ public class EnemyProperties : MonoBehaviour
         if (!inumFinished && (collided.gameObject.tag == "Player" || collided.gameObject.tag == "Payload")) {
             inumFinished = true;
             StartCoroutine(takeDamage(collided.gameObject));
-        }
+        } 
     }
 
     IEnumerator takeDamage(GameObject collided)
     {
         //yield on a new YieldInstruction that waits for 5 seconds.
 
+        animator.SetBool("isAttacking", true); 
+        
         string childName = collided.name + "Torch";
         Light2D collidedTorch = collided.transform.Find(childName).GetComponent<Light2D>();
         GenericTorch torchInfo = collided.transform.Find(childName).GetComponent<GenericTorch>();
@@ -45,5 +48,6 @@ public class EnemyProperties : MonoBehaviour
 
         inumFinished = false;
 
+        animator.SetBool("isAttacking", false); 
     }
 }

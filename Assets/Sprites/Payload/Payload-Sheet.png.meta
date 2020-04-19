@@ -4,34 +4,34 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -7350736784514693453
-    second: Torch-Sheet_0
+    second: Payload-Sheet_0
   - first:
       213: 4290816492176585213
-    second: Torch-Sheet_1
+    second: Payload-Sheet_1
   - first:
       213: 5028561332744366093
-    second: Torch-Sheet_2
+    second: Payload-Sheet_2
   - first:
       213: 832486303073105490
-    second: Torch-Sheet_3
+    second: Payload-Sheet_3
   - first:
       213: 4206932331437546343
-    second: Torch-Sheet_4
+    second: Payload-Sheet_4
   - first:
       213: -2867391947528690492
-    second: Torch-Sheet_0
+    second: Payload-Sheet_0
   - first:
       213: 7423694130991416336
-    second: Torch-Sheet_1
+    second: Payload-Sheet_1
   - first:
       213: 2118490002823343666
-    second: Torch-Sheet_2
+    second: Payload-Sheet_2
   - first:
       213: 1102092590117514864
-    second: Torch-Sheet_3
+    second: Payload-Sheet_3
   - first:
       213: -7336335955209833107
-    second: Torch-Sheet_4
+    second: Payload-Sheet_4
   - first:
       213: -719646498559096173
     second: Torch-Sheet_5
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Torch-Sheet_0
+      name: Payload-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -134,7 +134,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,7 +147,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Torch-Sheet_1
+      name: Payload-Sheet_1
       rect:
         serializedVersion: 2
         x: 16
@@ -155,7 +155,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,7 +168,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Torch-Sheet_2
+      name: Payload-Sheet_2
       rect:
         serializedVersion: 2
         x: 32
@@ -176,7 +176,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,7 +189,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Torch-Sheet_3
+      name: Payload-Sheet_3
       rect:
         serializedVersion: 2
         x: 0
@@ -197,7 +197,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,7 +210,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Torch-Sheet_4
+      name: Payload-Sheet_4
       rect:
         serializedVersion: 2
         x: 16
@@ -218,7 +218,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

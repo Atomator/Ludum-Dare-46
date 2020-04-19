@@ -10,6 +10,8 @@ public class PlayerProjectile : MonoBehaviour
     public float fireballForce = 10f;
     public float fireballEnergyNeeded = 0.2f;
 
+    public float timeToTillEvaporate = 0.2f;
+
 
     private Light2D playerTorch;
 
@@ -39,7 +41,7 @@ public class PlayerProjectile : MonoBehaviour
     IEnumerator DestroyFireball(GameObject toDestroy)
     {
         //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(timeToTillEvaporate);
 
         //After we have waited 5 seconds print the time again.
         Destroy(toDestroy);

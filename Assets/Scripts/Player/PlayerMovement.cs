@@ -6,10 +6,28 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed = 1;
 
+    public Animator animator;
+    private bool moving;
+
     public void Update()
     {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
+
+        if (h == 0 && v == 0) {
+            moving = false;
+        }
+        else {
+            moving = true;
+        }
+        
+
+        animator.SetFloat("horizontalAxis", h);
+        animator.SetFloat("verticalAxis", v);
+        animator.SetBool("moving", moving);
+
+        print("Horizontal: " + h);
+        print("Vertical: " + v);
 
         Vector3 tempVect = new Vector3(h, v, 0);
         tempVect = tempVect.normalized * speed * Time.deltaTime;

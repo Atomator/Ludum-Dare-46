@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Explode
+  m_Name: FireballExplode
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -22,20 +22,20 @@ AnimationClip:
     - time: 0
       value: {fileID: -8923506796552302180, guid: 357cc61601de8aa4e943e50b5c1d9ddc,
         type: 3}
-    - time: 0.25
+    - time: 0.083333336
       value: {fileID: 7265236092287153005, guid: 357cc61601de8aa4e943e50b5c1d9ddc,
         type: 3}
-    - time: 0.5
+    - time: 0.16666667
       value: {fileID: -5569838938099258082, guid: 357cc61601de8aa4e943e50b5c1d9ddc,
         type: 3}
-    - time: 0.75
+    - time: 0.25
       value: {fileID: -801391311525891144, guid: 357cc61601de8aa4e943e50b5c1d9ddc,
         type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 4
+  m_SampleRate: 12
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -59,7 +59,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1
+    m_StopTime: 0.33333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

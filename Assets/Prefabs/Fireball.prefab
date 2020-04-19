@@ -47,6 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d342e6b532907db380ef69d53575c54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectileDamage: 20
+  fireBallExplosionTime: 0.5
+  gObject: {fileID: 2311697957042373985, guid: 1651cae10db8f6b87b31fd36876d5d4f, type: 3}
 --- !u!50 &7954337132784590586
 Rigidbody2D:
   serializedVersion: 4
@@ -94,6 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3481528045159084234}
   - component: {fileID: 6607100954865578139}
+  - component: {fileID: 8716971607673501018}
   m_Layer: 9
   m_Name: FireballGFX
   m_TagString: Untagged
@@ -165,6 +169,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8716971607673501018
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4141251432963517350}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5bfea6d4b589bb44393345c0ea759f15, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8650530984594745644
 GameObject:
   m_ObjectHideFlags: 0

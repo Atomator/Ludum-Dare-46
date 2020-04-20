@@ -16,6 +16,10 @@ public class PlayerProjectile : MonoBehaviour
     public float minimumLight = 0f;
 
 
+    public Color playerTorchHealthy;
+
+    public Color playerTorchEmpty;
+
     private Light2D playerTorch;
 
 
@@ -58,6 +62,14 @@ public class PlayerProjectile : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1") && playerTorch.pointLightOuterRadius > minimumLight) {
             Shoot();
+        }
+
+        if (playerTorch.pointLightOuterRadius <= minimumLight) {
+            playerTorch.color = playerTorchEmpty;
+            playerTorch.pointLightOuterRadius = minimumLight;
+        }
+        else {
+            playerTorch.color = playerTorchHealthy;
         }
     }
 }

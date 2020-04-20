@@ -39,9 +39,8 @@ public class EnemyProperties : MonoBehaviour
         string childName = collided.name + "Torch";
         Light2D collidedTorch = collided.transform.Find(childName).GetComponent<Light2D>();
         GenericTorch torchInfo = collided.transform.Find(childName).GetComponent<GenericTorch>();
-
-        collidedTorch.pointLightOuterRadius -= enemyDamage;
-        
+         
+        collidedTorch.pointLightOuterRadius -= enemyDamage; 
 
         yield return new WaitForSeconds(timeBetweenAttacks);
 

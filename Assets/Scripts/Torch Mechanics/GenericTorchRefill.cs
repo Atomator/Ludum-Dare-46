@@ -11,6 +11,7 @@ public class GenericTorchRefill : MonoBehaviour
     public float torchRange = 2f;
     public float timeBetweenRefills = 1f;
     public float refillAmount = 0.2f;
+    public float minimumLight = 0f;
 
     public bool isEnabled = true;
 
@@ -52,7 +53,7 @@ public class GenericTorchRefill : MonoBehaviour
             Light2D collidedTorch = collided.transform.Find(childName).GetComponent<Light2D>();
             GenericTorch torchInfo = collided.transform.Find(childName).GetComponent<GenericTorch>();
 
-            if (collidedTorch.pointLightOuterRadius < torchInfo.torchRangeMax) {
+            if (collidedTorch.pointLightOuterRadius < torchInfo.torchRangeMax && torchLight2D.pointLightOuterRadius - refillAmount > minimumLight) {
                 if (collidedTorch.pointLightOuterRadius + refillAmount > 3) {
                     collidedTorch.pointLightOuterRadius = torchInfo.torchRangeMax;
                 } else {

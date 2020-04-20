@@ -45,7 +45,7 @@ public class PlayerProjectile : MonoBehaviour
         
         GameObject fireball = Instantiate(fireballPrefab, this.transform.position, this.transform.rotation);
         fireball.GetComponent<Rigidbody2D>().AddForce(direction * fireballForce, ForceMode2D.Impulse);
-
+        fireball.transform.right = fireball.GetComponent<Rigidbody2D>().velocity;
         yield return new WaitForSeconds(0.01f);
         animator.SetBool("attacking", false);
         //yield on a new YieldInstruction that waits for 5 seconds.

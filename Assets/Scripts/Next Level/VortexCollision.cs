@@ -8,7 +8,7 @@ public class VortexCollision : MonoBehaviour
     // Start is called before the first frame update
     public bool colliding = false;
 
-    public int levelNumber = 2;
+    public string levelName;
 
     public Animator transition;
 
@@ -29,7 +29,7 @@ public class VortexCollision : MonoBehaviour
     IEnumerator LoadNextLevel() {
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(levelNumber);
+        SceneManager.LoadScene(levelName);
     }
 
 }

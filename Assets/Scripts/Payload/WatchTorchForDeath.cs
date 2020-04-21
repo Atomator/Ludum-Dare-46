@@ -27,6 +27,6 @@ public class WatchTorchForDeath : MonoBehaviour
     IEnumerator LoadGameOver() {
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("DeathScreen");
     }
 }

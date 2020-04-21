@@ -3,6 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+
+//  [CustomEditor(typeof(RoomManager))]
+//  public class RoomManagerEditor : Editor
+//  {
+//    override public void OnInspectorGUI()
+//    {
+//      var RoomManager = target as RoomManager;
+ 
+//      RoomManager.isFinalLevel = GUILayout.Toggle(RoomManager.isFinalLevel, "Is Final Room");
+     
+//      if(RoomManager.isFinalLevel) {
+//         RoomManager.roomEnemies = (GameObject) EditorGUILayout.ObjectField("Room Enemies", RoomManager.roomEnemies, typeof(GameObject), true);
+//         RoomManager.levelPortal = (GameObject) EditorGUILayout.ObjectField("Exit Portal", RoomManager.levelPortal, typeof(GameObject), true);
+//         var levelNameVar = EditorGUILayout.TextField("Next Level", RoomManager.levelName);
+//         RoomManager.levelName = levelNameVar;
+
+//      } else {
+//         RoomManager.roomEnemies =  (GameObject) EditorGUILayout.ObjectField("Room Enemies", RoomManager.roomEnemies, typeof(GameObject), true);
+//         RoomManager.exitDoorsRoom =  (GameObject) EditorGUILayout.ObjectField("Room Exit Doors", RoomManager.exitDoorsRoom, typeof(GameObject), true);
+//      }
+       
+    
+//     serializedObject.ApplyModifiedProperties();
+
+//    }
+//  }
+
 public class RoomManager : MonoBehaviour
 {
     public GameObject roomEnemies;
@@ -10,8 +37,8 @@ public class RoomManager : MonoBehaviour
     public GameObject exitDoorsRoom;
     public GameObject levelPortal;
 
-    public bool isFinalLevel = false;
-    public int nextLevel;
+    public bool isFinalLevel;
+    public string levelName;
 
     private float transitionTime = 1f;
 
@@ -21,7 +48,7 @@ public class RoomManager : MonoBehaviour
     {
         roomEnemies.SetActive(false);
         if (isFinalLevel) {
-            levelPortal.GetComponent<VortexCollision>().levelNumber = nextLevel;
+            levelPortal.GetComponent<VortexCollision>().levelName = levelName;
             levelPortal.SetActive(false);   
         }
     }
@@ -52,25 +79,3 @@ public class RoomManager : MonoBehaviour
         }
     }
 }
-
- [CustomEditor(typeof(RoomManager))]
- public class RoomManagerEditor : Editor
- {
-   override public void OnInspectorGUI()
-   {
-     var RoomManager = target as RoomManager;
- 
-     RoomManager.isFinalLevel = GUILayout.Toggle(RoomManager.isFinalLevel, "Is Final Room");
-     
-     if(RoomManager.isFinalLevel) {
-        RoomManager.roomEnemies =  (GameObject) EditorGUILayout.ObjectField("Room Enemies", RoomManager.roomEnemies, typeof(GameObject), true);
-        RoomManager.levelPortal =  (GameObject) EditorGUILayout.ObjectField("Exit Portal", RoomManager.levelPortal, typeof(GameObject), true);
-        RoomManager.nextLevel = EditorGUILayout.IntField("Next Level", RoomManager.nextLevel);
-     } else {
-        RoomManager.roomEnemies =  (GameObject) EditorGUILayout.ObjectField("Room Enemies", RoomManager.roomEnemies, typeof(GameObject), true);
-        RoomManager.exitDoorsRoom =  (GameObject) EditorGUILayout.ObjectField("Room Exit Doors", RoomManager.exitDoorsRoom, typeof(GameObject), true);
-     }
-       
- 
-   }
- }

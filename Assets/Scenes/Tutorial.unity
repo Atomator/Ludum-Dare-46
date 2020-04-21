@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -5450,7 +5450,7 @@ MonoBehaviour:
   exitDoorsRoom: {fileID: 756085454}
   levelPortal: {fileID: 0}
   isFinalLevel: 0
-  nextLevel: 1
+  levelName: 
 --- !u!60 &2056963838
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6040,7 +6040,7 @@ MonoBehaviour:
   exitDoorsRoom: {fileID: 244224497}
   levelPortal: {fileID: 679817860}
   isFinalLevel: 1
-  nextLevel: 2
+  levelName: WinScreen
 --- !u!1 &7667942087818475876
 GameObject:
   m_ObjectHideFlags: 0

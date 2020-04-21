@@ -6,7 +6,8 @@ using UnityEngine;
 public class VortexCollision : MonoBehaviour
 {
     // Start is called before the first frame update
-    public bool colliding = false;
+    public bool collidingPlayer = false;
+    public bool collidingPayload = false;
 
     public string levelName;
 
@@ -14,14 +15,16 @@ public class VortexCollision : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collided) {
         if (collided.gameObject.tag == "Player") {
-            colliding = true;
-        } else {
-            colliding = false;
+            collidingPlayer = true;
+        }
+
+        if (collided.gameObject.tag == "Payload") {
+            collidingPayload = true;
         }
     }
 
     void Update () {
-        if (colliding) {
+        if (collidingPlayer && collidingPayload) {
             StartCoroutine(LoadNextLevel());
         }
     }
